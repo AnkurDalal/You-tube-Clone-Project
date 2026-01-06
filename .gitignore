@@ -1,0 +1,94 @@
+# =========================
+# Node.js
+# =========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# =========================
+# Environment variables
+# =========================
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# =========================
+# Build outputs
+# =========================
+dist/
+build/
+out/
+
+# =========================
+# Vite / React
+# =========================
+.vite/
+.cache/
+.eslintcache
+
+# =========================
+# Next.js (if used later)
+# =========================
+.next/
+
+# =========================
+# Logs
+# =========================
+logs/
+*.log
+
+# =========================
+# Database
+# =========================
+*.sqlite
+*.db
+*.mongodb
+
+# =========================
+# Uploads (videos / thumbnails)
+# =========================
+uploads/
+public/uploads/
+media/
+
+# =========================
+# OS / Editor files
+# =========================
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# =========================
+# IDEs
+# =========================
+.vscode/
+.idea/
+*.iml
+
+# =========================
+# Coverage
+# =========================
+coverage/
+
+# =========================
+# Temp files
+# =========================
+tmp/
+temp/
+
+# =========================
+# PM2
+# =========================
+pm2.log
+pids/
+
+# =========================
+# Cloud config (keep secrets out)
+# =========================
+*.pem
+*.key
