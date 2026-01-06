@@ -1,6 +1,6 @@
 import { lazy } from "react";
 import { createBrowserRouter } from "react-router";
-import App from "./App";
+import App from "./App.jsx";
 import { homeLoader } from "./routes/home.jsx";
 import { watchLoader } from "./routes/watch.jsx";
 import Error from "./components/Error.jsx";
