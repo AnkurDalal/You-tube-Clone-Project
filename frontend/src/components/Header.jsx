@@ -22,7 +22,10 @@ function Header({ toggleSideBar }) {
       </div>
 
       {/* Desktop Search Bar (hidden on mobile) */}
-      
+      <SearchBar
+        isMobileSearchOpen={isMobileSearchOpen}
+        onMobileSearchClose={() => setIsMobileSearchOpen(false)}
+      />
 
       <div className="flex items-center gap-2 md:gap-4">
         {/* Mobile Search Button (visible only on mobile) */}
