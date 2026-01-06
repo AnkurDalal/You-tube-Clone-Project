@@ -1,0 +1,48 @@
+import { lazy } from "react";
+import { createBrowserRouter } from "react-router";
+import App from "./App.jsx";
+import { homeLoader } from "./routes/home.jsx";
+import { watchLoader } from "./routes/watch.jsx";
+import Error from "./components/Error.jsx";
+import { channelLoader } from "./routes/channel.jsx";
+
+const Home = lazy(() => import("./routes/home.jsx"));
+const Register = lazy(() => import("./routes/register.jsx"));
+const Login = lazy(() => import("./routes/login.jsx"));
+const Watch = lazy(() => import("./routes/watch.jsx"));
+const Channel = lazy(() => import("./routes/channel.jsx"));
+
+// Suspence added in App.jsx for all routes
+const router = createBrowserRouter([
+  {
+    element: <App />,
+    errorElement: <Error />,
+    children: [
+      {
+        path: "/",
+        loader: homeLoader,
+        Component: Home,
+      },
+      {
+        path: "/register",
+        Component: Register,
+      },
+      {
+        path: "/login",
+        Component: Login,
+      },
+      {
+        path: "/watch/:videoId",
+        loader: watchLoader,
+        Component: Watch,
+      },
+      {
+        path: "/channel/:channelId",
+        loader: channelLoader,
+        Component: Channel,
+      },
+    ],
+  },
+]);
+
+export default router;
