@@ -6,7 +6,7 @@ This project follows modern development standards using **ES Modules**, **Vite (
 
 
 
-## Tech Stack
+### Tech Stack
 
 ### Frontend
 - React (Vite)
